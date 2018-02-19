@@ -49,12 +49,8 @@ foreach ($updates as $update) {
             'Температура = ' .json_encode($result->main->temp).  "\n" .
             //Давление
             'Давление = ' .json_encode($result->main->pressure). " hPa".  "\n".
-
+            //Влажность
             'Влажность = ' .json_encode($result->main->humidity). "%" . "\n");
-
-        $telegramApi->sendLocation($update->message->chat->id,50,50);
-        
-
 
     } else {
 
